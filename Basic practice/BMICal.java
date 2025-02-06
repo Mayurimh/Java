@@ -1,0 +1,21 @@
+import java.util.Scanner;
+class BMICal
+{
+	public static void main(String [] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a weigth (pounds) :  ");
+		float p =sc.nextFloat();
+		
+		System.out.println("Enter a height (inches) :  ");
+		float h =sc.nextFloat();
+		
+		float kilo = p *0.45359237f;
+		float meter = h * 0.0254f;
+		
+		float BMI = kilo / (meter*meter);
+		
+		System.out.println("BMI : "+ BMI);
+		
+	}
+}
