@@ -1,8 +1,0 @@
-class Narrowing
-{
-	public static void main(String [] args){
-		char a = 'g';
-		System.out.println((byte)a); 
-		
-	}
-}
