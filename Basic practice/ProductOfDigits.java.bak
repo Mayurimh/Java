@@ -1,0 +1,27 @@
+class ProductOfDigit
+{
+	public static void main(String [] args){
+		int num = 1234;
+		int rem;
+		int prod =1;
+		
+		rem = num % 10;
+		prod =prod * rem;
+		num = num/10;
+		
+		rem = num % 10;
+		prod =prod * rem;
+		num = num/10;
+		
+		rem = num % 10;
+		prod =prod * rem;
+		num = num/10;
+		
+		rem = num % 10;
+		prod =prod * rem;
+		
+		
+		System.out.println("Product of all digits : "+prod );
+		
+	}
+} 

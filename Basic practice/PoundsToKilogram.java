@@ -1,0 +1,13 @@
+import java.util.Scanner;
+class PoundsToKilogram
+{
+	public static void main(String [] args){
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter value in pounds : ");
+		float pound = sc.nextFloat();
+		
+		float kilogram = pound * 0.454f;
+		
+		System.out.println("pound to kilogram  : "+kilogram);
+	}
+}
