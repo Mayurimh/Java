@@ -1,0 +1,14 @@
+import java.util.Scanner;
+class Example1
+{
+	public static void main(String [] args){
+		Scanner a= new Scanner(System.in);
+		System.out.println("Are you incubition Student (true / false) : ");
+		boolean ans = a.nextBoolean();
+		
+		if(ans == false){
+			System.out.println("Paid money ..");
+		}
+		System.out.println("Do classes..");
+	}
+}
