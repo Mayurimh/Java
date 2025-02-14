@@ -1,0 +1,19 @@
+class KrishNumber
+{
+	public static void main(String[]a){
+	
+	int num =144;
+	int dup =num;
+	int sum =0;
+		while(dup > 0){
+			int fact = 1;
+			int rem = dup % 10;
+			for(int i=1; i<=rem; i++){
+				fact *=i; 
+			}
+			sum += fact;
+			dup/=10;
+		}
+		System.out.println(num == sum? "krish":"no krish");
+}
+}
