@@ -1,0 +1,23 @@
+import java.util.Scanner;
+class RigthTriangle
+{
+	public static void main(String[] arg){
+		System.out.print("Enter number of rows : ");
+		int row = new Scanner(System.in).nextInt();
+		
+		for(int i = 1; i<=row ; i++){
+			//char a = 'a';
+			char b = 'b';
+			for(int j=1; j<=i; j++){
+				//System.out.print("* ");
+				//System.out.print(j);
+				//System.out.print(" "+a);
+				//a+=1;
+				
+				System.out.print(" "+b);
+				b+=1;
+			}
+			System.out.println();
+		}
+	}
+}
