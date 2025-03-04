@@ -1,0 +1,19 @@
+import java.util.Scanner;
+class PrimeNumber
+{
+	public static void main(String[] args){
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter a number : ");
+		int num = sc.nextInt();
+		
+		System.out.println("Number is Prime: "+isPrime(num,2));
+	}
+	public static boolean isPrime(int num, int den){
+		if(num==den)
+			return true;
+		else if(num % den == 0)
+			return false;
+		else
+			return isPrime(num,++den);
+	}
+}
