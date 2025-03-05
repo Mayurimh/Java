@@ -1,0 +1,21 @@
+class NeonNumber{
+	public static void main(String[] args)
+	{
+		//Scanner ip = new Scanner(System.in);
+		for(int i=1; i<=1000000;i++){
+			if(isNeouNumber(i)){
+				System.out.println(i);}
+		}
+	}
+	public static boolean isNeouNumber(int num){
+		int sqr= num * num;
+		int sum = 0;
+		for(int i= sqr; i>0; i/=10){
+			int rem = i % 10;
+			sum+=rem;
+		}
+		if(num == sum)
+			return true;
+		return false;
+	}
+}

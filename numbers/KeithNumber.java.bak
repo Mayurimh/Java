@@ -1,0 +1,60 @@
+import java.util.Scanner;
+
+public class KeithNumber {
+
+    // Function to check if a number is Keith Number
+    static boolean isKeith(int num) {
+        // Find number of digits
+        int temp = num, digits = 0;
+
+        // Calculate the number of digits
+        while (temp > 0) {
+            temp = temp / 10;
+            digits++;
+        }
+
+        // Create an array to store the digits
+        int[] terms = new int[digits];
+        temp = num;
+
+        // Store the digits in the array
+        for (int i = digits - 1; i >= 0; i--) {
+            terms[i] = temp % 10;
+            temp = temp / 10;
+        }
+
+        // Start generating the sequence
+        int nextTerm = 0;
+        while (nextTerm < num) {
+            nextTerm = 0;
+
+            // Sum of previous 'digits' terms
+            for (int i = 0; i < digits; i++) {
+                nextTerm += terms[i];
+            }
+
+            // Shift the array elements to the left
+            for (int i = 0; i < digits - 1; i++) {
+                terms[i] = terms[i + 1];
+            }
+
+            // Add the new term at the end
+            terms[digits - 1] = nextTerm;
+
+            // If the next term equals the original number
+            if (nextTerm == num) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    public static void main(String[] args) {
+        for(int i=10; i<=1000; i++){
+			if(KeithNumber(i)){
+				System.out.println(i);
+			}
+        }
+    }
+}
