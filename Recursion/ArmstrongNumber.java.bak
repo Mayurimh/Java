@@ -1,0 +1,22 @@
+import java.util.Scanner;
+class ArmstrongNumber
+{
+	public static void main(String[] args){
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a number : ");
+		int num = sc.nextInt();
+		System.out.println(isArmstrongNum(num,num,0));
+	}
+	public static boolean isArmstrongNum(int num, int temp, int sum){
+		
+	}
+	public static int count(int num, int cnt){
+		return num ==0?cnt:count(num/10, ++cnt);
+	}
+	public static int power(int num,int den){
+		return den == 0? 1: num * power(num,--den);
+	} 
+	public static int sumOfDigit(int num, int sum){
+		return num==0 ? sum : sumOfDigit(num/10,sum+=num%10);
+	}
+}
