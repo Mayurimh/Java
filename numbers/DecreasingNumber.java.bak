@@ -1,0 +1,28 @@
+import java.util.Scanner;
+class DecreasingNumber
+{
+	public static void main(String[] args){
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a number : ");
+		int num = sc.nextInt();
+		System.out.println("is thsi number is increasing number : "+decreasingNum(num));
+	}
+	public static boolean decreasingNum(int num){
+		boolean decre = false;
+		int lastdig= num %10;
+		num /=10;
+		if(lastdig<num%10){
+			while(num>0){
+				int rem = num % 10;
+				if(lastdig<rem)
+					decre = true;
+				else
+					decre =false;
+				lastdig =rem;
+				num/=10;
+			}
+			return decre;
+		}
+		return false;
+	}
+}
