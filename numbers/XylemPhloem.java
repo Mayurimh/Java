@@ -1,0 +1,25 @@
+import java.util.Scanner;
+class XylemPhloem
+{
+	public static void main(String[] args){
+		if(isXylem(12349)){
+			System.out.println("Number is Xylem...");
+		}
+		else{
+			System.out.println("Number is Pholem...");
+		}
+	}
+	public static boolean isXylem(int num){
+		int sumExtern = num % 10;
+		int sumMid = 0;
+		num /=10;
+		while(num>9){
+			sumMid += num % 10;
+			num/=10;
+		}
+		sumExtern+=num;
+		if(sumExtern == sumMid)
+			return true;
+		return false;
+	}
+}
