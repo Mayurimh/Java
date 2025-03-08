@@ -1,0 +1,51 @@
+import java.util.Scanner;
+class SmithNumber
+{
+	public static void main(String [] args){
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a number : ");
+		int num = sc.nextInt();
+		System.out.println("is number Smith or not : "+isSmithNumber(num));
+	}
+	public static boolean isSmithNumber(int num){
+		int next = 1;
+		int sumofDig = sumofDigit(num);
+		int sumFact = 0;
+		if(!isPrime(num)){
+			while(num!=1){
+				next = nextPrime(next);
+				if(num % next == 0){
+					if (next < 10)
+					{
+						sumFact += next;
+					}
+					else{
+						sumFact += sumofDigit(next);
+					}
+					num /= next;
+					next = 1;
+				}
+			}
+		}
+			return sumofDig == sumFact;
+	}
+	public static int sumofDigit(int num){
+		int sum = 0;
+		for(int i = num ; i>0; i/=10)
+			sum+= i%10;;
+		return sum;
+	}
+	public static boolean isPrime(int num){
+		for(int den =2; den <num; den++){
+			if(num % den == 0)
+				return false;
+		}
+		return true;
+	}
+	public static int nextPrime(int num){
+		for(int i= num +1;;i++){
+			if(isPrime(i))
+				return i;
+		}
+	}
+}
