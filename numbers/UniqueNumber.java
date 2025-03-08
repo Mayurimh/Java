@@ -1,0 +1,21 @@
+import java.util.Scanner;
+class UniqueNumber
+{
+	public static void main(String [] args){
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a number: ");
+		int num = sc.nextInt();
+		System.out.println("is Unique number : "+isUniqueNum(num));
+	}
+	public static boolean isUniqueNum(int num){
+		for(int i= num; i>0; i/=10){
+			int check = i % 10;
+			int temp = i/10;
+			for(int j= temp; j>0; j/=10){
+				if(j % 10 == check)
+					return false;
+			}
+		}
+		return true;
+	}
+}
