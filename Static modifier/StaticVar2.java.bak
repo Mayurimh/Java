@@ -1,0 +1,15 @@
+class StaticVar2
+{
+	static String str;
+	public static void main(String[] args){
+		System.out.println(str);
+		test();
+		String str = "mayuri";
+		System.out.println(str);
+		System.out.println(StaticVar2.str);
+	}
+	public static void test(){
+		str = "Mhavale";
+		System.out.println(str);
+	}
+}
