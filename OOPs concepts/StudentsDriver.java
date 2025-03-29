@@ -1,0 +1,31 @@
+class StudentsDriver
+{
+	public static void main(String[] args){
+		Students s1 = new Students();
+		//System.out.println("College name : "+s1.collegeName);
+		
+		//String nameOfStud;
+		//int PRN_num ;
+		//String branch;
+		//float percent;
+		//boolean isPlaced;
+		
+		
+		s1.nameOfStud = "Mayuri Mhavale";
+		s1.PRN_num = 21334212;
+		s1.branch = "Computer science Engineering";
+		s1.percent = 99.90f;
+		s1.isPlaced = true;
+		s1.displayInfo();
+		
+		System.out.println("_______________________________");
+		
+		
+		s1.nameOfStud = "Chetan Mhavale";
+		s1.PRN_num = 23234212;
+		s1.branch = "Cyber Security";
+		s1.percent = 78.99f;
+		s1.isPlaced = false;
+		s1.displayInfo();
+	}
+}
