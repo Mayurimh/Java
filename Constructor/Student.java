@@ -8,7 +8,7 @@ class Student
 	
 	public Student(){
 		System.out.println("Constructor");
-		System.out.println(this);
+		System.out.println("reference of object : "+this);
 
 	}
 	public void displayData(){
