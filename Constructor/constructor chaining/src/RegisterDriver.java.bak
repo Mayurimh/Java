@@ -1,0 +1,12 @@
+class RegisterDriver
+{
+	public static void main(String[] args){
+		Register r1 = new Register();
+		r1.displayData();
+		
+		System.out.println("_______________________________");
+		
+		Register r2 = new Register();
+		r2.displayData();
+	}
+}

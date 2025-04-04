@@ -1,0 +1,42 @@
+class Register
+{
+	String name;
+	long phone;
+	long tel;
+	char gen;
+	String blood;
+	String email;
+	String dob;
+	
+	Register(){}
+	
+	Register(String name, long phone, char gen, String email){
+		this.name = name;
+		this.phone = phone;
+		this.gen = gen;
+		this.email= email;
+	}
+	
+	Register(String name, long phone, char gen, String email, long tel){
+		this(name, phone, gen, email);
+		this.tel = tel;
+	}
+	Register(String name, long phone, char gen, String email, long tel, String blood){
+		this(name, phone, gen, email, tel);
+		this.blood = blood;
+	}
+	Register(String name, long phone, char gen, String email, long tel, String blood,String dob){
+		this(name, phone, gen, email, tel, blood);
+		this.dob = dob;
+	}
+	
+	public void displayData(){
+		System.out.println("Name : "+name);
+		System.out.println("Phone : "+phone);
+		System.out.println("gender : "+gen);
+		System.out.println("email : "+email);
+		System.out.println("telephone number : "+tel);
+		System.out.println("blood : "+blood);
+		System.out.println("DOB : "+dob);
+	}
+}
