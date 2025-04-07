@@ -1,0 +1,34 @@
+//this programs check the static block can call static method and variable and non-static block can call non-static methods or variable.
+
+class Demo
+{
+	String name;
+	
+	static String collegeName="DYPTC";
+	
+	int rollNum;
+	String branch;
+	
+	static{
+		System.out.println("Static block");
+		demoStaticMethod();
+		System.out.println("College name : "+collegeName);
+	}
+	
+	public static void demoStaticMethod(){
+		System.out.println("This is static method");
+	}
+	
+	{
+		demoNonStaticMethod();
+		System.out.println("name : "+name);
+	}
+	
+	public void demoNonStaticMethod(){
+		System.out.println("This is non-static method");
+	}
+	
+	public static void main(String[] args){
+		Demo d1 = new Demo();
+	}
+}
