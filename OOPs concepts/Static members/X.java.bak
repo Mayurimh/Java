@@ -1,0 +1,15 @@
+public class X
+{
+	static int a=100;
+	public static void main(String[] args){
+		System.oot.println("from main method of class X");
+	}
+}
+
+class XYDriver
+{
+	Y y1 = new Y();
+	y1.main(null);
+	y1.test();
+	y1.display();
+}
